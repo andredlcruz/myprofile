@@ -1,0 +1,19 @@
+@import '../node_modules/@angular/material/theming'; 
+@include mat-core(); 
+
+$my-app-primary: mat-palette($mat-blue-grey, 500);
+$my-app-accent:  mat-palette($mat-blue-grey, 900, 800, 700);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+
+
+
+/******************Materialize****************************************/
+@import "../node_modules/materialize-css/sass/components/_color.scss";
+$roboto-font-path: '../node_modules/materialize-css/dist/fonts/roboto/' !default;
+@import '../node_modules/materialize-css/sass/components/variables';
+@import "../node_modules/materialize-css/sass/materialize";

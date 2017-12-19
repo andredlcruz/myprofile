@@ -19,9 +19,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css", 
+		"theme.scss"
       ],
-      "scripts": [],
+      "scripts": ["../node_modules/jquery/dist/jquery.js",
+	  "../node_modules/materialize-css/dist/js/materialize.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -53,6 +55,7 @@
       "config": "./karma.conf.js"
     }
   },
+  
   "defaults": {
     "styleExt": "css",
     "component": {}
