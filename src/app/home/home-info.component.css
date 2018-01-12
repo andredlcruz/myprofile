@@ -8,4 +8,10 @@ mat-grid-tile.info h1 {
 color: red; 
 }
 
+img.camera {
+  max-width:60%;
+  max-height:60%;
+  display: block;
+  margin: auto; 
+}
 
