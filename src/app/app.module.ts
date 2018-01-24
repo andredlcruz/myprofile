@@ -15,12 +15,16 @@ import 'hammerjs';
 import { HomeComponent } from './home/home.component';
 import { HomeInfoComponent } from './home/home-info.component'; 
 import { ProfileComponent } from './profile/profile.component';
+import { PhotosComponent } from './photos/photos.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
 const appRoutes: Routes =[
   { path: 'home', component: HomeComponent }, 
   { path: 'profile', component: ProfileComponent}, 
+  { path: 'photos', component: PhotosComponent }, 
+  { path: 'dashboard', component: DashboardComponent}, 
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 ]
 
@@ -30,7 +34,7 @@ const appRoutes: Routes =[
     AppComponent,
     HomeComponent,
     ProfileComponent, 
-    HomeInfoComponent
+    HomeInfoComponent, PhotosComponent, DashboardComponent
   ],
   imports: [
     BrowserModule, 
