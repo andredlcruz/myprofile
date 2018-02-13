@@ -15,7 +15,9 @@ import 'hammerjs';
 import { HomeComponent } from './home/home.component';
 import { HomeInfoComponent } from './home/home-info.component'; 
 import { ProfileComponent } from './profile/profile.component';
-
+import { EducationComponent } from './profile/education.component';
+import { HistoryComponent } from './profile/history.component';
+import {StatementComponent } from './profile/statement.component'; 
 
 
 const appRoutes: Routes =[
@@ -30,7 +32,10 @@ const appRoutes: Routes =[
     AppComponent,
     HomeComponent,
     ProfileComponent, 
-    HomeInfoComponent
+    HomeInfoComponent, 
+    EducationComponent, 
+    HistoryComponent, 
+   StatementComponent
   ],
   imports: [
     BrowserModule, 
