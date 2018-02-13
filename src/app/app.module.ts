@@ -15,15 +15,11 @@ import 'hammerjs';
 import { HomeComponent } from './home/home.component';
 import { HomeInfoComponent } from './home/home-info.component'; 
 import { ProfileComponent } from './profile/profile.component';
-<<<<<<< HEAD
 import { EducationComponent } from './profile/education.component';
 import { HistoryComponent } from './profile/history.component';
 import {StatementComponent } from './profile/statement.component'; 
-=======
-import { PhotosComponent } from './photos/photos.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-
->>>>>>> 9680d73dcd4cf8fd701e813c632e63c4957addde
+import {DashboardComponent } from './dashboard/dashboard.component';
+import {PhotosComponent } from './photos/photos.component';
 
 
 const appRoutes: Routes =[
@@ -39,15 +35,11 @@ const appRoutes: Routes =[
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfileComponent, 
-<<<<<<< HEAD
-    HomeInfoComponent, 
+    ProfileComponent,  HomeInfoComponent, 
     EducationComponent, 
     HistoryComponent, 
-   StatementComponent
-=======
-    HomeInfoComponent, PhotosComponent, DashboardComponent
->>>>>>> 9680d73dcd4cf8fd701e813c632e63c4957addde
+    StatementComponent, 
+    PhotosComponent, DashboardComponent
   ],
   imports: [
     BrowserModule, 
