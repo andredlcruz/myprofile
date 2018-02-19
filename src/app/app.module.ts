@@ -6,7 +6,9 @@ import { MatButtonModule, MatCardModule, MatMenuModule,
 
 import { AppComponent } from './app.component';
 import {RouterModule, Routes}  from '@angular/router';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 
 import 'hammerjs';
@@ -39,12 +41,13 @@ const appRoutes: Routes =[
     EducationComponent, 
     HistoryComponent, 
     StatementComponent, 
-    PhotosComponent, DashboardComponent
+    PhotosComponent, DashboardComponent  
   ],
   imports: [
     BrowserModule, 
     BrowserAnimationsModule, MatButtonModule, MatCardModule, MatMenuModule,
     MatToolbarModule, MatIconModule, MatGridListModule, RouterModule.forRoot(appRoutes),
+    AngularFirestoreModule, AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
