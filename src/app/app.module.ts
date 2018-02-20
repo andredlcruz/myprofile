@@ -24,6 +24,7 @@ import {DashboardComponent } from './dashboard/dashboard.component';
 import {PhotosComponent } from './photos/photos.component';
 
 
+
 const appRoutes: Routes =[
   { path: 'home', component: HomeComponent }, 
   { path: 'profile', component: ProfileComponent}, 
@@ -41,7 +42,7 @@ const appRoutes: Routes =[
     EducationComponent, 
     HistoryComponent, 
     StatementComponent, 
-    PhotosComponent, DashboardComponent  
+    PhotosComponent, DashboardComponent
   ],
   imports: [
     BrowserModule, 

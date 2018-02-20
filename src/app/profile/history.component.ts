@@ -3,6 +3,8 @@ import {FbProfileService } from "../fb-profile.service";
 import { Observable } from 'rxjs/Observable';
 import { AngularFirestore } from 'angularfire2/firestore';
 
+import { AngularFireList } from 'angularfire2/database/interfaces';
+
 
 @Component({
   selector: 'history',
@@ -12,15 +14,14 @@ import { AngularFirestore } from 'angularfire2/firestore';
 })
 export class HistoryComponent implements OnInit {
 
-  list: Observable<any[]>; 
+  list:Observable<any[]>
 
   constructor(private db: FbProfileService) { }
 
   ngOnInit() {
 
-    this.list = this.db.getAllEmployment();
-    console.log(this.list); 
-
+    //this.list = this.db.getAllEmployment();
+    this.list = this.db.getAllEmployementTest(); 
   }
 
 }
