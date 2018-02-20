@@ -20,8 +20,8 @@ export class HistoryComponent implements OnInit {
 
   ngOnInit() {
 
-    //this.list = this.db.getAllEmployment();
-    this.list = this.db.getAllEmployementTest(); 
+    this.list = this.db.getAllEmployment()
+   // this.list = this.db.getAllEmployementTest(); 
   }
 
 }
