@@ -22,6 +22,7 @@ import { HistoryComponent } from './profile/history.component';
 import {StatementComponent } from './profile/statement.component'; 
 import {DashboardComponent } from './dashboard/dashboard.component';
 import {PhotosComponent } from './photos/photos.component';
+import { ReversePipe } from './reverse.pipe';
 
 
 const appRoutes: Routes =[
@@ -41,7 +42,7 @@ const appRoutes: Routes =[
     EducationComponent, 
     HistoryComponent, 
     StatementComponent, 
-    PhotosComponent, DashboardComponent  
+    PhotosComponent, DashboardComponent, ReversePipe  
   ],
   imports: [
     BrowserModule, 
