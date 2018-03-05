@@ -43,11 +43,7 @@ const appRoutes: Routes =[
     EducationComponent, 
     HistoryComponent, 
     StatementComponent, 
-<<<<<<< HEAD
-    PhotosComponent, DashboardComponent
-=======
     PhotosComponent, DashboardComponent, ReversePipe  
->>>>>>> Development
   ],
   imports: [
     BrowserModule, 

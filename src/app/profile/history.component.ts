@@ -14,13 +14,18 @@ import { AngularFireList } from 'angularfire2/database/interfaces';
 })
 export class HistoryComponent implements OnInit {
 
-  list:Observable<any[]>
+  list;
+   
 
   constructor(private db: FbProfileService) { }
 
   ngOnInit() {
 
-    this.list = this.db.getAllEmployment()
+    this.db.getAllEmployment()
+    .subscribe(x => {this.list = x.reverse()}); 
+
+      
+    
    // this.list = this.db.getAllEmployementTest(); 
   }
 
