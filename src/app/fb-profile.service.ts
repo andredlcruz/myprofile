@@ -16,6 +16,17 @@ export class FbProfileService {
     
   }
 
+  getJobDutiesbyID(keyID: string): Observable<any[]> {
+    return this.db.list('functions/' + keyID).valueChanges(); 
+  }
+  getJobDuties(): Observable<any[]> {
+  return this.db.list('functions').valueChanges(); 
+  }
+
+getJobDutiesTest(): AngularFireList<any[]>  {
+  return this.db.list('functions'); 
+}
+
   getAllEmployementTest(): Observable<any[]> {
     return this.db.list('employment', ref => ref.orderByChild('position')).valueChanges();   
   }
