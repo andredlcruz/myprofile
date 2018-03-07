@@ -19,9 +19,10 @@ import { HomeInfoComponent } from './home/home-info.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EducationComponent } from './profile/education.component';
 import { HistoryComponent } from './profile/history.component';
-import {StatementComponent } from './profile/statement.component'; 
-import {DashboardComponent } from './dashboard/dashboard.component';
-import {PhotosComponent } from './photos/photos.component';
+import { StatementComponent } from './profile/statement.component'; 
+import { ContactComponent } from './profile/contact.component'; 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PhotosComponent } from './photos/photos.component';
 import { ReversePipe } from './reverse.pipe';
 
 
@@ -43,6 +44,7 @@ const appRoutes: Routes =[
     EducationComponent, 
     HistoryComponent, 
     StatementComponent, 
+    ContactComponent,
     PhotosComponent, DashboardComponent, ReversePipe  
   ],
   imports: [
