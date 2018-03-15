@@ -2,3 +2,17 @@ img.circle {
   max-width:50%;
   max-height:50%;
 }
+
+ul.a {
+  list-style: circle; 
+  padding-left: 25px;
+  line-height: 200%;
+}
+
+span.title {
+  font-weight: bold;
+}
+
+
+
+

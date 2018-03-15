@@ -15,36 +15,40 @@ import { Console } from '@angular/core/src/console';
 })
 export class HistoryComponent implements OnInit {
 
-  list;
+  
   duties; 
-  test;  
+  listRef: AngularFireList<any[]>;
+  list: Observable<any[]>; 
+
+
+ 
+  testRef: AngularFireList<any[]>;
+  testList:  Observable<any[]>;
+
    
 
   constructor(private db: FbProfileService) { }
 
   ngOnInit() {
 
-    this.db.getAllEmployment()
-    .subscribe(x => {this.list = x.reverse()}); 
+  this.list = this.db.getAllEmployment(); 
+  
+ 
+   
 
    this.db.getJobDuties()
   .subscribe(  x => { this.duties = x[0] } ); 
 
-  // this.db.getJobDutiesTest().
-  // snapshotChanges(['child_added'])
-  // .subscribe( actions => {
-  //             actions.forEach(x => {console.log(x.key + JSON.stringify(x.payload.val()))})
-             
-  // });  
-
-  this.db.getJobDutiesTest()
+   this.db.getJobDutiesTest()
   .snapshotChanges(['child_added'])
   .subscribe(actions => {
-   actions.filter(x =>  x.key === '001').forEach(x => this.test = x.payload.val())  }
+   actions.filter(x =>  x.key === '001').forEach(x => this.testList = x.payload.val())  }
   
   )
+
  
-    
+  //console.log(this.testList); 
+  
       
    //JSON.stringify(x) 
     }

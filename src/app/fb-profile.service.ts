@@ -10,10 +10,20 @@ export class FbProfileService {
 
   constructor(private fb: AngularFirestore, private db: AngularFireDatabase) {   }
 
+
+ /*
+ * Returns a reference list of all employment entries
+ * that holds the key and payload. 
+ * 
+ * Modify the list to map the key and payload.
+ * 
+ * @return Observables list in reverse order
+ */
   getAllEmployment(): Observable<any[]> {
-    //  return this.db.collection('employment').valueChanges(); 
-    return this.db.list('employment').valueChanges(); 
-    
+    return this.db.list('employment').snapshotChanges()
+    .map(changes => {
+      return changes.map(c => ({key: c.payload.key, ...c.payload.val()})).reverse();
+    })
   }
 
   getJobDutiesbyID(keyID: string): Observable<any[]> {
@@ -28,7 +38,13 @@ getJobDutiesTest(): AngularFireList<any[]>  {
 }
 
   getAllEmployementTest(): Observable<any[]> {
-    return this.db.list('employment', ref => ref.orderByChild('position')).valueChanges();   
+    
+    return this.db.list('employment').snapshotChanges()
+    .map(changes => {
+      return changes.map(c => ({key: c.payload.key, ...c.payload.val()})).reverse();
+    })
+     
+     
   }
   
 

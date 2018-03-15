@@ -4,27 +4,37 @@
 
 
 <ul class="collapsible" data-collapsible="accordion">
-  <li *ngFor="let item of list">
+  <li *ngFor="let item of list | async">
+
     <div class="collapsible-header">
       <i class="large material-icons">work</i>
-     {{item.name}}
-      </div>
+    <span class="title"> {{item.name}} </span>
+    </div>
 
-    <div class="collapsible-body">
+    <div class="collapsible-body">  
+       <span class="title">{{item.rank}}</span>
+    <br>
+       <span>{{item.startdate}} - {{item.enddate}}</span>
     
-        <ul class="collection">
-    <li class="collection-item">
-     
-      <span class="title">{{item.rank}}</span>
-      
-      <p>{{item.startdate}} - {{item.enddate}}</p>
-      <div class="secondary-content"></div>
-    </li>   
-  </ul>
+  
+
+       <ul class="a">
+          <li class="collection-item">Alvin</li>
+          <li class="collection-item">Alvin</li>
+          <li class="collection-item">Alvin</li>
+          <li class="collection-item">Alvin</li>
+        </ul>
+            
+
+    
+
     </div>
   </li>
 
 </ul>
 
 
-{{test | json}}
+<ul class="a"  *ngFor="let item of list | async">
+ <li> {{item.key}} </li>
+ </ul>
+
