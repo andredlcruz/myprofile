@@ -24,6 +24,7 @@ import { ContactComponent } from './profile/contact.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PhotosComponent } from './photos/photos.component';
 import { ReversePipe } from './reverse.pipe';
+import { FilterhistoryPipe } from './filterhistory.pipe';
 
 
 
@@ -45,7 +46,7 @@ const appRoutes: Routes =[
     HistoryComponent, 
     StatementComponent, 
     ContactComponent,
-    PhotosComponent, DashboardComponent, ReversePipe  
+    PhotosComponent, DashboardComponent, ReversePipe, FilterhistoryPipe  
   ],
   imports: [
     BrowserModule, 
