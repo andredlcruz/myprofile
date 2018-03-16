@@ -33,8 +33,12 @@ export class FbProfileService {
   return this.db.list('functions').valueChanges(); 
   }
 
-getJobDutiesTest(): AngularFireList<any[]>  {
-  return this.db.list('functions'); 
+getJobDutiesTest(): Observable<any[]>   {
+  //return this.db.list('functions'); 
+  return this.db.list('functions').snapshotChanges()
+  .map(changes => {
+    return changes.map(c => ({ key: c.payload.key, ...c.payload.val()} ))
+  }); 
 }
 
   getAllEmployementTest(): Observable<any[]> {

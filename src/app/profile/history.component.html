@@ -16,14 +16,19 @@
     <br>
        <span>{{item.startdate}} - {{item.enddate}}</span>
     
-  
-
-       <ul class="a">
+     
+          <ul class="a"  *ngFor="let x of testList | async">
+             <li>{{x | json }}</li>
+              
+          </ul>
+        
+         
+       <!-- <ul class="a">
           <li class="collection-item">Alvin</li>
           <li class="collection-item">Alvin</li>
           <li class="collection-item">Alvin</li>
           <li class="collection-item">Alvin</li>
-        </ul>
+        </ul> -->
             
 
     
@@ -34,7 +39,10 @@
 </ul>
 
 
-<ul class="a"  *ngFor="let item of list | async">
- <li> {{item.key}} </li>
+
+
+<ul class="a"  *ngFor="let x of testListID | async">
+    <li>{{x.duty}}</li>
+     
  </ul>
 
