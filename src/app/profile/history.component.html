@@ -15,22 +15,11 @@
        <span class="title">{{item.rank}}</span>
     <br>
        <span>{{item.startdate}} - {{item.enddate}}</span>
-    
-     
-          <ul class="a"  *ngFor="let x of testList | async">
-             <li>{{x | json }}</li>
-              
-          </ul>
-        
-         
-       <!-- <ul class="a">
-          <li class="collection-item">Alvin</li>
-          <li class="collection-item">Alvin</li>
-          <li class="collection-item">Alvin</li>
-          <li class="collection-item">Alvin</li>
-        </ul> -->
-            
-
+      
+ 
+        <ul class="a"  *ngFor="let x of item?.functions | filterhistory; index as i;">
+          <li> {{x}} </li> 
+       </ul>
     
 
     </div>
@@ -41,8 +30,4 @@
 
 
 
-<ul class="a"  *ngFor="let x of testListID | async">
-    <li>{{x.duty}}</li>
-     
- </ul>
 

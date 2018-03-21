@@ -11,17 +11,19 @@ export class FilterhistoryPipe implements PipeTransform {
   
   constructor(private db: FbProfileService){}
   transform(value: any, args?: any): any {
-    
+       let duties = []; 
        if(!value) return; 
     
- 
- 
-    //return   value.filter(x => console.log (x.key === args ) ); 
-    this.list = this.db.getJobDuties(); 
-    console.log(this.list); 
-    return this.db.getJobDuties(); 
+       for(let key in value){
+       //  console.log(value[key].duty)
+         duties.push(value[key].duty)
+       }
 
-   // return Array.from(this.list);
+       //console.log(duties); 
+    
+   
+      return duties; 
+ 
   }
   
 }

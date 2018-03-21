@@ -17,7 +17,9 @@ export class HistoryComponent implements OnInit {
 
   duties; 
   listRef: AngularFireList<any[]>;
-  list: Observable<any[]>; 
+  list; 
+  listofEmployment; 
+  
 
 
  
@@ -30,8 +32,8 @@ export class HistoryComponent implements OnInit {
   ngOnInit() {
 
   this.list = this.db.getAllEmployment(); 
-  this.testList = this.db.getJobDuties();   
-  this.testListID = this.db.getJobDutiesbyID('001'); 
+  this.testList = this.db.getJobDutiesTest();   
+ 
  
  
   
@@ -49,15 +51,6 @@ export class HistoryComponent implements OnInit {
    
    //JSON.stringify(x) 
     }
-
-  trackItem(index, item){
-  console.log(index)
-  }
-
-  testFunc(e){
-   console.log(e); 
-
-  }
 
 
 }
