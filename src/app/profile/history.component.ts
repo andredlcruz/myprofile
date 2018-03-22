@@ -15,10 +15,9 @@ import { Console } from '@angular/core/src/console';
 })
 export class HistoryComponent implements OnInit {
 
-  duties; 
-  listRef: AngularFireList<any[]>;
-  list; 
-  listofEmployment; 
+  list: Observable<any[]>;
+  skillList: Observable<any[]>;; 
+ 
   
 
 
@@ -32,22 +31,11 @@ export class HistoryComponent implements OnInit {
   ngOnInit() {
 
   this.list = this.db.getAllEmployment(); 
-  this.testList = this.db.getJobDutiesTest();   
- 
- 
- 
+  this.skillList = this.db.getSkillList(); 
+
+
+
   
-
-   this.db.getJobDuties()
-  .subscribe(  x => { this.duties = x[0] } ); 
-
-  //  this.db.getJobDutiesTest()
-  // .snapshotChanges(['child_added'])
-  // .subscribe(actions => {
-  //  actions.filter(x =>  x.key === '001').forEach(x => this.testList = x.payload.val())  }
-  // )
-
- 
    
    //JSON.stringify(x) 
     }

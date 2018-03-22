@@ -26,13 +26,12 @@ export class FbProfileService {
     })
   }
 
+
+
   getJobDutiesbyID(keyID: string): Observable<any[]> {
     return this.db.list('functions/' + keyID).valueChanges(); 
   }
-  getJobDuties(): Observable<any[]> {
-  return this.db.list('functions').valueChanges(); 
-  }
-
+ 
 getJobDutiesTest(): Observable<any[]>   {
   //return this.db.list('functions'); 
   return this.db.list('functions').snapshotChanges()
@@ -41,15 +40,11 @@ getJobDutiesTest(): Observable<any[]>   {
   }); 
 }
 
-  getAllEmployementTest(): Observable<any[]> {
-    
-    return this.db.list('employment').snapshotChanges()
-    .map(changes => {
-      return changes.map(c => ({key: c.payload.key, ...c.payload.val()})).reverse();
-    })
+getSkillList():  Observable<any[]> {
+  return this.db.list('webtools').valueChanges(); 
+}
+
      
-     
-  }
   
 
 }

@@ -17,8 +17,8 @@
        <span>{{item.startdate}} - {{item.enddate}}</span>
       
  
-        <ul class="a"  *ngFor="let x of item?.functions | filterhistory; index as i;">
-          <li> {{x}} </li> 
+        <ul class="a" style="list-style-type:disc" *ngFor="let x of item?.functions | filterhistory; index as i;">
+         <li> <i class="tiny material-icons left">brightness_1</i> {{x}} </li> 
        </ul>
     
 
@@ -28,6 +28,8 @@
 </ul>
 
 
-
+<div *ngFor="let skill of skillList | async">
+    <span class="badge">{{skill}}</span>
+</div>
 
 
