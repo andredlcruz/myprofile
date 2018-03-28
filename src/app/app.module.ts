@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { NgModule } from '@angular/core';
+import { NgModule, ApplicationRef } from '@angular/core';
 import { MatButtonModule, MatCardModule, MatMenuModule,
         MatToolbarModule, MatIconModule, MatGridListModule } from '@angular/material';
+import { MaterializeModule } from 'angular2-materialize'; 
+
+
 
 import { AppComponent } from './app.component';
-import {RouterModule, Routes}  from '@angular/router';
+import {RouterModule, Routes, ActivatedRoute }  from '@angular/router';
 import { AngularFireModule, } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -52,7 +55,7 @@ const appRoutes: Routes =[
     BrowserModule, 
     BrowserAnimationsModule, MatButtonModule, MatCardModule, MatMenuModule,
     MatToolbarModule, MatIconModule, MatGridListModule, RouterModule.forRoot(appRoutes),
-    AngularFirestoreModule, AngularFireDatabaseModule,
+    AngularFirestoreModule, AngularFireDatabaseModule, MaterializeModule, 
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
