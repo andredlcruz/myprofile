@@ -9,5 +9,9 @@ import { AngularFireList } from 'angularfire2/database/interfaces';
 export class FbPhotoService {
 
   constructor(private fb: AngularFirestore, private db: AngularFireDatabase) { }
+  
+  getAllPhotos(): Observable<any[]> {
+    return this.db.list('photos').valueChanges(); 
+  }
 
 }

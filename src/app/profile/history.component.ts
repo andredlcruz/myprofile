@@ -18,10 +18,6 @@ export class HistoryComponent implements OnInit {
   list: Observable<any[]>;
   skillList: Observable<any[]>;; 
  
-  
-
-
- 
   testRef: AngularFireList<any[]>;
   testList:  Observable<any[]>;
   testListID: Observable<any[]>;
