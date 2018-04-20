@@ -6,26 +6,26 @@
   photos in works!
 </p>
 
-<div *ngFor="let photo of photos | async" >
-  {{photo.name}}
-</div>
 
 
 
-<div *ngFor="let photo of photos | async">
-  <img src="{{photo.name}}" />
-</div>
-
-<div class="slider">
-    <ul class="slides"  *ngFor="let photo of photos | async">
-        <li>
+<div *ngIf="photos">
+<div class="slider"  materialize="slider" >
+ 
+    <ul class="slides">
+        <li *ngFor="let photo of photos | async">
             <img src="{{photo.name}}" /> <!-- random image -->
             <div class="caption center-align">
               <h3>This is our big Tagline!</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
             </div>
           </li>
-    
+       
     </ul>
-  
+    
 </div>
+</div>
+
+
+
+    

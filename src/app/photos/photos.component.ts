@@ -5,6 +5,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 
 import { AngularFireList } from 'angularfire2/database/interfaces';
 import { Console } from '@angular/core/src/console';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -23,6 +24,8 @@ export class PhotosComponent implements OnInit {
   ngOnInit() {
 
     this.photos = this.db.getAllPhotos(); 
+
+  
 
   }
 
