@@ -1,0 +1,13 @@
+.gallery {
+     background-color: #efefef;
+     background-image: url("../../assets/images/me_gallery.jpg");
+     background-size: 300px;
+   
+     background-position: bottom 0px right 125px;
+     background-repeat: no-repeat; /*Prevent showing multiple background images*/
+     
+}
+
+img.utep {
+  width: 10%;   
+  }

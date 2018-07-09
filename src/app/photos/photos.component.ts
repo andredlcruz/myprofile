@@ -8,6 +8,7 @@ import { Console } from '@angular/core/src/console';
 import * as $ from 'jquery';
 
 
+
 @Component({
   selector: 'app-photos',
   templateUrl: './photos.component.html',

@@ -1,3 +1,5 @@
+<div class="gallery">
+
 <div class="card-panel">
   <span class="blue-text text-darken-2"></span>
 </div>
@@ -9,23 +11,27 @@
 
 
 
-<div *ngIf="photos">
-<div class="slider"  materialize="slider" >
+  
+   <div class="row">
+    <div  *ngFor="let photo of photos | async; index as i">
+      <div class="row" *ngIf="i%4 === 0"> </div>
+   <div class="col s12 m6 l3">
+   <img class="materialboxed" 
+   attr.data-caption="{{photo.caption}}"
+   width="400" src="{{photo.name}}"  materialize="materialbox"/>
+  </div>
+  
+  </div>
+</div>
+
+<!-- <img  class="utep" src="../../assets/images/me_gallery.jpg" > -->
+</div>
  
-    <ul class="slides">
-        <li *ngFor="let photo of photos | async">
-            <img src="{{photo.name}}" /> <!-- random image -->
-            <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-       
-    </ul>
-    
-</div>
-</div>
 
 
 
-    
+<script>
+ $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+</script>
