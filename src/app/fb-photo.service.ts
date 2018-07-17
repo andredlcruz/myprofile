@@ -14,4 +14,16 @@ export class FbPhotoService {
     return this.db.list('photos').valueChanges(); 
   }
 
+  getPhotoList(): Observable<any[]> {
+    return this.db.list('photos').snapshotChanges(['child_added'])
+  }
+
+  getPhotoGallery(key: string): Observable<any[]> {
+    return this.db.list('photos/' + key + '/photos').valueChanges(); 
+  }
+
+  getGalleryInfo(key: string): Observable<any[]> {
+    return this.db.list('photos/' + key).valueChanges(); 
+  }
+
 }

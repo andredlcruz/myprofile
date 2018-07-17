@@ -26,6 +26,7 @@ import { StatementComponent } from './profile/statement.component';
 import { ContactComponent } from './profile/contact.component'; 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PhotosComponent } from './photos/photos.component';
+import { PhotogalleryComponent } from  './photos/photogallery.component';
 import { ReversePipe } from './reverse.pipe';
 import { FilterhistoryPipe } from './filterhistory.pipe';
 
@@ -35,8 +36,10 @@ const appRoutes: Routes =[
   { path: 'home', component: HomeComponent }, 
   { path: 'profile', component: ProfileComponent}, 
   { path: 'photos', component: PhotosComponent }, 
+  { path: 'photogallery/:id', component: PhotogalleryComponent }, 
   { path: 'dashboard', component: DashboardComponent}, 
   { path: '', redirectTo: 'home', pathMatch: 'full'}
+  
 ]
 
 
@@ -49,7 +52,8 @@ const appRoutes: Routes =[
     HistoryComponent, 
     StatementComponent, 
     ContactComponent,
-    PhotosComponent, DashboardComponent, ReversePipe, FilterhistoryPipe  
+    PhotosComponent,  PhotogalleryComponent,
+    DashboardComponent, ReversePipe, FilterhistoryPipe  
   ],
   imports: [
     BrowserModule, 
