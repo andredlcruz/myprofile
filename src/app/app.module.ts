@@ -19,6 +19,7 @@ import 'hammerjs';
 
 import { HomeComponent } from './home/home.component';
 import { HomeInfoComponent } from './home/home-info.component'; 
+import {HomeSkillComponent } from './home/home-skill.component'; 
 import { ProfileComponent } from './profile/profile.component';
 import { EducationComponent } from './profile/education.component';
 import { HistoryComponent } from './profile/history.component';
@@ -47,7 +48,7 @@ const appRoutes: Routes =[
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfileComponent,  HomeInfoComponent, 
+    ProfileComponent,  HomeInfoComponent, HomeSkillComponent,
     EducationComponent, 
     HistoryComponent, 
     StatementComponent, 

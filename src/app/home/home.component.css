@@ -33,3 +33,22 @@
   100% {opacity: 1;}
   }  
 
+
+  .skill {
+    background-color: #e0e0e0;
+    /* height: 400px; */
+   
+    color: black; 
+  }
+  .skill h4  {
+    padding-top: 25px;
+    text-align: center; 
+    
+  }
+  .subtitle {
+    padding-bottom: 10px; 
+    text-align: center; 
+  }
+  .collection li {
+    background-color: #e0e0e0;
+  }

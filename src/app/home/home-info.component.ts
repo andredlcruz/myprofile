@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class HomeInfoComponent implements OnInit {
-  Description = 'Welcome to my web app. It was designed with Angular and Firebase';
-  Bio = "Andre De La Cruz graduated from the University of Texas at El Paso in 2013 with a degree in Computer Science. His area of focus includes web development and creating single page apps in Angular and HTML. Other interest includes programming in C# and Java.  A long term goal is to secure a position as a .NET developer. Andre has expressed interest in enhancing his skills in C#, MVC and LINQs. “I would like my career path to include Microsoft technologies and programming with C# and ASP.NET'"
+  Description = 'Welcome to my webpage. It was designed and developed in Angular and Materializecss with Firebase in the backend';
+  Bio = "Andre De La Cruz graduated from the University of Texas at El Paso in 2013 with a degree in Computer Science. His area of focus includes web development and single page apps (SPA) in Angular and HTML5. Other interest includes programming in C# and Java.  A long term goal is to secure a position as a .NET developer and combing Angular5 to create large scale applications. Andre has aslo expressed interest in programming in C#, SQL, and Python. “I would like my career path to include Microsoft technologies and programming with C# and ASP.NET while enhancing my understanding in web development'"
   constructor() {}
 
     ngOnInit() {}
