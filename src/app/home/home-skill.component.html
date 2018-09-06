@@ -1,84 +1,114 @@
-
-
 <div class="skill">
-    
-    <h4>PROGRAMMING INTEREST and STRENGH</h4>
-    <p class="subtitle">Technology</p>
 
-    <div class="row">
-    <div class="col s6">I'm on the right</div>
+  <h4>PROGRAMMING INTEREST and STRENGH</h4>
+  <p class="subtitle">Technology</p>
 
-    <div class="col s6">  
-        
-            <ul class="collection">
+  <div class="row">
+    <div class="col s6" [innerHtml]='extendedSkillSet'></div>
+
+    <div class="col s6">
+
+      <ul class="collection">
 
 
-                    <li class="collection-item avatar">
-                            <i class="material-icons circle">code</i>
-                            <span class="title">Programming</span>
-                            <p>Java, C#, C <br>
-                               SQL, PHP, JavaScript
-                            </p>
-                            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                          </li>
-                    <li class="collection-item avatar">
-                            <i class="material-icons circle">computer</i>
-                      <span class="title">Operating Systems</span>
-                      <p> Windows 10, 7, XP <br>
-                         OS <br>
-                         Linux
-                      </p>
-                     
-                    </li>
-                  
-                    <li class="collection-item avatar">
-                      <i class="material-icons circle green">insert_chart</i>
-                      <span class="title">Title</span>
-                      <p>First Line <br>
-                         Second Line
-                      </p>
-                      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                    </li>
-                   
-                </ul>
-   
+        <li class="collection-item avatar" (mouseover)="displaySkillset(1)">
+          <i class="material-icons circle green">code</i>
+          <span class="title"><b>Programming Languages</b></span>
+          <p>Java, C#, C
+            <br> SQL, PHP, JavaScript
+          </p>
+          <a href="#!" class="secondary-content">
+            <i class="material-icons">grade</i>
+          </a>
+        </li>
 
-   </div>
-    
+        <li class="collection-item avatar" (mouseover)="displaySkillset(2)">
+          <i class="material-icons circle black">web</i>
+          <span class="title"><b>Web Development</b></span>
+          <p>HTML5, CSS, AngularJS, Angular5
+            <br> NodeJS, Javascript, TypeScript
+          </p>
+          <a href="#!" class="secondary-content">
+            <i class="material-icons">grade</i>
+          </a>
+        </li>
+
+
+
+        <li class="collection-item avatar" (mouseover)="displaySkillset(3)">
+          <i class="material-icons circle red">keyboard</i>
+          <span class="title"><b>Development Tools</b></span>
+          <p> Visual Studio, Visual Studio Code 
+            <br> SQL Sever Management Studio,
+            <br> NetBeans, Eclipse, Notepad++
+            
+
+          </p>
+
+        </li>
+
+        <li class="collection-item avatar" (mouseover)="displaySkillset(4)">
+          <i class="material-icons circle blue">computer</i>
+          <span class="title"><b>Operating Systems</b></span>
+          <p> Windows 10, 7, XP
+            <br> OS, and Linux
+            <br>
+
+          </p>
+
+        </li>
+
+
+
+      </ul>
+
+
     </div>
+
+  </div>
 
 </div>
 
 
 <div class="parallax-container center valign-wrappe">
 
-        <div class="row">
-                <div class="col s12 white-text">
-                  <h2 class="teal-text teal-text lighten-2">Parallax Template</h2>
-                  <p>A modern responsive front-end framework based on Material Design</p>
-                  <a class="waves-effect waves-light btn-large teal lighten-2">Get Started</a>
-                </div>
-              </div>
-
-
-
-        <div class="parallax"  materialize="parallax"><img src="https://78.media.tumblr.com/770397a0dbe49895f6b5c5fbe627aa76/tumblr_pbzw2860ft1r7rh42o2_1280.jpg"></div>
-      </div>
-      <div class="section white">
-        <div class="row container">
-          <h2 class="header">Parallax</h2>
-          <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-        </div>
-      </div>
-      <div class="parallax-container">
-        <div class="parallax"><img src="images/parallax2.jpg"></div>
-      </div>
-
-
-      <script>
+  <div class="row">
+    <div class="col s12 white-text">
+      <h2 class="orange-text teal-text lighten-2">CURRENT PROJECTS </h2>
       
-      $(document).ready(function(){
-      $('.parallax').parallax();
+      <a class="waves-effect waves-light btn-large teal lighten-2">Check it out!</a>
+    </div>
+  </div>
+
+
+
+  <div class="parallax" materialize="parallax">
+    <img src="https://78.media.tumblr.com/770397a0dbe49895f6b5c5fbe627aa76/tumblr_pbzw2860ft1r7rh42o2_1280.jpg">
+  </div>
+</div>
+
+<div class="section white">
+  <div class="row container animated bounce">
+    <h2 class="header">What's going on!</h2>
+    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground
+      content while scrolling.</p>
+  </div>
+</div>
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="images/parallax2.jpg">
+  </div>
+</div>
+
+
+
+
+
+
+<script>
+
+  $(document).ready(function () {
+    $('.parallax').parallax();
   });
-        
-      </script>
+
+</script>
