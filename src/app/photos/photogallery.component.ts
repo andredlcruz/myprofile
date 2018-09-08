@@ -10,6 +10,7 @@ import { AngularFireList } from 'angularfire2/database/interfaces';
 import { Console } from '@angular/core/src/console';
 import * as $ from 'jquery';
 
+
 @Component({
   selector: 'app-photogallery',
   templateUrl: './photogallery.component.html',

@@ -11,7 +11,6 @@
     {{p.caption}}
     </div> -->
 
-
     <div class="row">
         <div *ngFor="let photo of photos | async; index as i">
             <div class="row" *ngIf="i%4 === 0"> </div>
@@ -24,11 +23,20 @@
     </div>
 
 
-
     </div>
+
+  <div class="row">
+       <div class="col s12" align="center">
+           <a class="waves-effect waves-light btn-large" routerLink="/photos">
+           <i class="material-icons ">monochrome_photos</i></a></div>
+       </div>
+
+    
+
     <script>
         $(document).ready(function () {
             $('.materialboxed').materialbox();
         });
 
-    </script>
+</script>
+

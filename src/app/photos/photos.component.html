@@ -6,14 +6,14 @@
 
   
  
-
-  <div *ngFor="let list of photoList | async">
-  <a class="waves-effect waves-teal btn-flat" (click)="displayPhotoGallery(list?.key)">{{list?.payload.val().gallery }}</a>
-  </div>
+  <div class="row">
+     <div class="col s7 push-s5">
+  <div class="card-panel hoverable" *ngFor="let list of photoList | async">
+  <a class="waves-effect btn-flat" (click)="displayPhotoGallery(list?.key)">{{list?.payload.val().gallery }}</a>
+   {{(list?.payload.val()) | json}} Numbers
+  
+</div>  
+</div>
+</div>
  
 
-<script>
- $(document).ready(function(){
-    $('.materialboxed').materialbox();
-  });
-</script>
